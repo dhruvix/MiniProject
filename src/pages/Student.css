@@ -1,0 +1,41 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(4,1fr);
+    background: none;
+}
+
+.heading {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    align-self: start;
+}
+
+.mainbox {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+a{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 300px;
+}
+
+a:hover{
+    background-color: dodgerblue;
+    text-decoration: none;
+    color: aliceblue;
+}
+
