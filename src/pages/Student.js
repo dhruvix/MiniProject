@@ -1,5 +1,6 @@
-import './Student.css';
 import React from "react";
+import './Student.css';
+import Logo from '../components/Logo';
 import {
   Link,
   useRouteMatch
@@ -9,7 +10,10 @@ function Student() {
     let match = useRouteMatch();
 
     return (
-      <div className="mainbox">
+      <div>
+        <div style={{marginTop:'10px'}}>
+        <Logo />
+        </div>
         <div className="main">
             <h2 className="heading">Student Analytics</h2>
             <div>
@@ -35,6 +39,9 @@ function Student() {
             </div>
             <div>
             <Link to={`${match.url}/journal`}>Journal Publications</Link>
+            </div>
+            <div>
+            <Link to={`${match.url}/fundedprojects`}>Funded Projects</Link>
             </div>
         </div>
       </div>
