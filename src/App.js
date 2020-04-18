@@ -14,6 +14,7 @@ import Achievements from './pages/achievements/Achievements';
 import Conference from './pages/conference/Conference';
 import Journal from './pages/journal/Journal';
 import FundedProjects from './pages/fundedprojects/FundedProjects';
+import Faculty from './pages/Faculty';
 
 function App(){
   return (
@@ -51,6 +52,51 @@ function App(){
         </Route>
         <Route exact path="/student/fundedprojects">
           <FundedProjects />
+        </Route>
+        <Route exact path="/faculty">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/book">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/book_chapter">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/conference_paper">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/consultancy">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/courses_handled">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_conference_symposia">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_guest_lecture">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_patent">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_qualification">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_research">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_service">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/faculty_workshop_fdp">
+          <Faculty />
+        </Route>
+        <Route exact path="/faculty/funded_projects">
+          <Faculty />
         </Route>
         <Route path="/">
           <Error />
