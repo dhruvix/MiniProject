@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
-import POptions from './POptions';
-import Table from '../../components/Table1';
-import Error from '../Error';
-import Graph from '../../components/Graph';
-import '../Home.css';
+import ConOptions from './ConOptions';
+import Table from '../../../components/Table';
+import Error from '../../Error';
+import Graph from '../../../components/Graph';
+import '../../Home.css';
 
-function Placements(){
+function Consultancy(){
   const [type1,settype]=useState("none")
   const [component,setcomponent]=useState(true)
   const [data,setData]=useState([])
@@ -23,14 +23,13 @@ const submithandler=(data1,typpe1,graph1)=>{
   return(       
       <div>
       {component?
-      (<POptions submithandler= {submithandler} />):
+      (<ConOptions submithandler= {submithandler} />):
           (type1==="data")?
           (<div><Table tabledata={data} fields={graph}/></div>)
           :(type1==="graph")?<Graph data={graph}/>:<Error />
       }
-
               </div>         
   );
 }
 
-export default Placements;
+export default Consultancy;

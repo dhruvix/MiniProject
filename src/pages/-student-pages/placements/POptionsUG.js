@@ -1,22 +1,27 @@
 import React,{useState} from 'react'
 import axios from 'axios';
-import '../Home.css';
-import Logo from '../../components/Logo';
+import '../../Home.css';
+import Logo from '../../../components/Logo';
 
-function POptionsPG({submithandler,changeOp})
+function POptionsUG({submithandler,changeOp})
 {
   const [yvalue, sety] = useState(true);
   let obj
   if(!yvalue)
-  obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"pg"} 
+  obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"ug"} 
   else
-  obj={tab:"placement",x:"companyName",y:"Count Of Students",dep:"all",year:"all",op:"pg"}
+  obj={tab:"placement",x:"companyName",y:"Count Of Students",dep:"all",year:"all",op:"ug"}
   const [hstudies, setIt] = useState(obj);
   function handle(event){
     event.persist()
-        if(event.target.value==="yearOfPassing" || event.target.value==="departmentId"){
+        if(event.target.value==="yearOfPassing"){
           sety(false);
-          obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"pg"}
+          obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"ug"}
+          setIt(obj)
+        }
+        else if(event.target.value==="departmentId"){
+          sety(false);
+          obj={tab:"placement",x:"departmentId",y:"Count Of Students",dep:"all",year:"all",op:"ug"}
           setIt(obj)
         }
         else{
@@ -35,6 +40,8 @@ function POptionsPG({submithandler,changeOp})
         if (e.target.value === "data") {
          await axios.post('/data',hstudies).then(res => {
               submithandler(res.data,e.target.value,hstudies)
+              console.log("hstudies",hstudies);
+              console.log("res.data",res.data);
           }).catch(err => console.log(err))
         }
         if (e.target.value === "graph"){
@@ -42,8 +49,9 @@ function POptionsPG({submithandler,changeOp})
         }
     }
 
-    function toUG(){
-      changeOp('ug');
+    function toPG(){
+      console.log("change to pg by clicking this");
+      changeOp('pg');
     }
 
     return (
@@ -58,7 +66,7 @@ function POptionsPG({submithandler,changeOp})
           <form >
             <div>
             
-              <h3>Choose parameters (PG) :</h3>
+              <h3>Choose parameters (UG) :</h3>
               <div className="together">
                 <h5>x:</h5>
                 <select className="select-css" id="x" name="x" onChange={handleChange} onClick={handle}>
@@ -74,6 +82,9 @@ function POptionsPG({submithandler,changeOp})
                 <select className="select-css" id="y" name="y" onChange={handleChange} >
                   <option value="Count Of Students">no. of students placed</option>
                   <option value="Students with multiple offers">No. of students with multiple packages</option>
+                  <option value="Average Package">avg package</option>
+                  <option value="Maximum Package">max package</option>
+                  <option value="Minimum Package">min package</option>
                 </select>
               </div>
               :
@@ -120,7 +131,7 @@ function POptionsPG({submithandler,changeOp})
               <div className="buttline">
                 <button type="submit" className="butt" value="data" onClick={submitHandler}>data</button>
                 <button type="submit" value="graph" className="butt" onClick={submitHandler}>graph</button>
-                <button className="butt" onClick={toUG}>UG</button>
+                <button className="butt" onClick={toPG} >PG</button>
               </div>
 
             </div>
@@ -132,4 +143,6 @@ function POptionsPG({submithandler,changeOp})
     )
 }
 
-export default POptionsPG;
+export default POptionsUG;
+
+

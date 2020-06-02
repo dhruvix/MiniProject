@@ -1,22 +1,22 @@
 import React,{useState} from 'react'
 import axios from 'axios';
-import '../Home.css';
-import Logo from '../../components/Logo';
+import '../../Home.css';
+import Logo from '../../../components/Logo';
 
-function CeOptions({submithandler})
+function POptionsPG({submithandler,changeOp})
 {
   const [yvalue, sety] = useState(true);
   let obj
   if(!yvalue)
-  obj={tab:"competative_exam_details",x:"qualifyingExam",y:"status",dep:"all",year:"all"} 
+  obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"pg"} 
   else
-  obj={tab:"competative_exam_details",x:"yearOfPassing",y:"NoOfStu",dep:"all",year:"all"}
+  obj={tab:"placement",x:"companyName",y:"Count Of Students",dep:"all",year:"all",op:"pg"}
   const [hstudies, setIt] = useState(obj);
   function handle(event){
     event.persist()
-        if(event.target.value==="qualifyingExam"){
+        if(event.target.value==="yearOfPassing" || event.target.value==="departmentId"){
           sety(false);
-          obj={tab:"competative_exam_details",x:"qualifyingExam",y:"status",dep:"all",year:"all"}
+          obj={tab:"placement",x:"yearOfPassing",y:"Count Of Students",dep:"all",year:"all",op:"pg"}
           setIt(obj)
         }
         else{
@@ -42,24 +42,29 @@ function CeOptions({submithandler})
         }
     }
 
+    function toUG(){
+      changeOp('ug');
+    }
+
     return (
         <div>
         <div style={{marginTop:'10px'}}>
         <Logo />
         </div>
+        
         <div className="cardHolder">
         <div className="card2">
 
           <form >
             <div>
             
-              <h3>Choose parameters</h3>
+              <h3>Choose parameters (PG) :</h3>
               <div className="together">
                 <h5>x:</h5>
                 <select className="select-css" id="x" name="x" onChange={handleChange} onClick={handle}>
-                  <option value="yearOfPassing">year of passing</option>
+                  <option value="companyName">name of company</option>
                   <option value="departmentId">department</option>
-                  <option value="qualifyingExam">qualifying exam</option>
+                  <option value="yearOfPassing">year of passing</option> 
                 </select>
               </div>
 
@@ -67,18 +72,17 @@ function CeOptions({submithandler})
               <div className="together">
                 <h5>y:</h5>
                 <select className="select-css" id="y" name="y" onChange={handleChange} >
-                  <option value="status">status</option>
-                  <option value="examScore">exam score</option>
+                  <option value="Count Of Students">no. of students placed</option>
+                  <option value="Students with multiple offers">No. of students with multiple packages</option>
                 </select>
               </div>
               :
               <div className="together">
                 <h5>y:</h5>
                 <select className="select-css" id="y" name="y" onChange={handleChange}>
-                  <option value="NoOfStu">no. of students</option>
+                  <option value="Count Of Students">no. of students placed</option>
                 </select>
               </div>}
-
 
               <div className="together">
                 <h5>year:</h5>
@@ -116,6 +120,7 @@ function CeOptions({submithandler})
               <div className="buttline">
                 <button type="submit" className="butt" value="data" onClick={submitHandler}>data</button>
                 <button type="submit" value="graph" className="butt" onClick={submitHandler}>graph</button>
+                <button className="butt" onClick={toUG}>UG</button>
               </div>
 
             </div>
@@ -127,6 +132,4 @@ function CeOptions({submithandler})
     )
 }
 
-export default CeOptions
-
-
+export default POptionsPG;

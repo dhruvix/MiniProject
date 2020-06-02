@@ -2,25 +2,46 @@ import React from 'react';
 import './App.css';
 import Particlejs from './Particlejs'; 
 import Home from './pages/Home';
-import Student from './pages/Student';
 import Error from './pages/Error';
+import Begin from './pages/Begin';
 import {Switch, Route} from "react-router-dom";
-import HigherStudies from './pages/higherstudies/HigherStudies';
-import Placements from './pages/placements/Placements';
-import CompetetiveExams from './pages/competetiveexams/CompetetiveExams';
-import Internships from './pages/internships/Internships';
-import Activities from './pages/activities/Activities';
-import Achievements from './pages/achievements/Achievements';
-import Conference from './pages/conference/Conference';
-import Journal from './pages/journal/Journal';
-import FundedProjects from './pages/fundedprojects/FundedProjects';
+// student pages 
+import Student from './pages/Student';
+import HigherStudies from './pages/-student-pages/HigherStudies';
+import Placements from './pages/-student-pages/placements/Placements';
+import CompetetiveExams from './pages/-student-pages/competetiveexams/CompetetiveExams';
+import Internships from './pages/-student-pages/Internships';
+import Activities from './pages/-student-pages/Activities';
+import Achievements from './pages/-student-pages/Achievements';
+import Conference from './pages/-student-pages/Conference';
+import Journal from './pages/-student-pages/Journal';
+import FundedProjects from './pages/-student-pages/FundedProjects';
+//faculty pages
 import Faculty from './pages/Faculty';
+import Book from './pages/-faculty-pages/Book';
+import BookChapter from './pages/-faculty-pages/BookChapter';
+import ConferencePaper from './pages/-faculty-pages/ConferencePaper';
+import Consultancy from './pages/-faculty-pages/consultancy/Consultancy';
+import CoursesHandled from './pages/-faculty-pages/courses_handled/CoursesHandled';
+import FacConfSymp from './pages/-faculty-pages/FacConfSymp';
+import Fac from './pages/-faculty-pages/faculty/Fac';
+import FacGuestLec from './pages/-faculty-pages/FacGuestLec';
+import FacultyPatent from './pages/-faculty-pages/FacultyPatent';
+import FacultyQuali from './pages/-faculty-pages/FacultyQuali';
+import FacultyResearch from './pages/-faculty-pages/FacultyResearch';
+import FacultyService from './pages/-faculty-pages/FacultyService';
+import FacWorkFDP from './pages/-faculty-pages/FacWorkFDP';
+import FundedProj from './pages/-faculty-pages/FundedProj';
+import LinkGen from './pages/linkGen/LinkGen';
 
 function App(){
   return (
     <div>
       <Switch>
         <Route exact path="/">
+          <Begin />
+        </Route>
+        <Route exact path="/home">
           <Home />
         </Route>
         <Route exact path="/student">
@@ -57,46 +78,49 @@ function App(){
           <Faculty />
         </Route>
         <Route exact path="/faculty/book">
-          <Faculty />
+          <Book />
         </Route>
         <Route exact path="/faculty/book_chapter">
-          <Faculty />
+          <BookChapter />
         </Route>
         <Route exact path="/faculty/conference_paper">
-          <Faculty />
+          <ConferencePaper />
         </Route>
         <Route exact path="/faculty/consultancy">
-          <Faculty />
+          <Consultancy />
         </Route>
         <Route exact path="/faculty/courses_handled">
-          <Faculty />
+          <CoursesHandled />
         </Route>
         <Route exact path="/faculty/faculty">
-          <Faculty />
+          <Fac />
         </Route>
         <Route exact path="/faculty/faculty_conference_symposia">
-          <Faculty />
+          <FacConfSymp />
         </Route>
         <Route exact path="/faculty/faculty_guest_lecture">
-          <Faculty />
+          <FacGuestLec />
         </Route>
         <Route exact path="/faculty/faculty_patent">
-          <Faculty />
+          <FacultyPatent />
         </Route>
         <Route exact path="/faculty/faculty_qualification">
-          <Faculty />
+          <FacultyQuali />
         </Route>
         <Route exact path="/faculty/faculty_research">
-          <Faculty />
+          <FacultyResearch />
         </Route>
         <Route exact path="/faculty/faculty_service">
-          <Faculty />
+          <FacultyService />
         </Route>
         <Route exact path="/faculty/faculty_workshop_fdp">
-          <Faculty />
+          <FacWorkFDP />
         </Route>
         <Route exact path="/faculty/funded_projects">
-          <Faculty />
+          <FundedProj />
+        </Route>
+        <Route exact path="/generate_link">
+          <LinkGen />
         </Route>
         <Route path="/">
           <Error />

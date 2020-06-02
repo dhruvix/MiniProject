@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import './Home.css';
-import MSRITlogo from './MSRITlogo.png';
+import MSRITlogo from '../images/MSRITlogo.png';
 
 function Home() {
   return (
@@ -9,11 +9,14 @@ function Home() {
         <div className = "mainbox">
         <div className="card1">
           <img alt="MSRIT_logo" src={MSRITlogo} />
-          <h1>College Analytics</h1>
+          <h1>RIT college data visualization and analytics</h1>
           <div className="buttline">
-          <Link className = "butt" to="/faculty">Faculty</Link>
-          <Link className = "butt" to="/student">Student</Link>
-          <Link className = "butt" to="/nonteaching">Non Teaching Staff</Link>
+          <Link className = "butt" to="/faculty">Faculty Data Visualization</Link>
+          <Link className = "butt" to="/student">Student Data Visualization</Link>
+          </div>
+          <div className="buttline">
+          <Link className = "butt" to="/faculty-anal">Faculty Data Analytics</Link>
+          <Link className = "butt" to="/student-anal">Student Data Analytics</Link>
           </div>
         </div>
         </div>

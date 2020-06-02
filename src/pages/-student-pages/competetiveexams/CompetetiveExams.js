@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import CeOptions from './CeOptions';
-import Table from '../../components/Table';
-import Error from '../Error';
-import Graph from '../../components/Graph';
-import '../Home.css';
+import Table from '../../../components/Table';
+import Error from '../../Error';
+import Graph from '../../../components/Graph';
+import '../../Home.css';
 
 function CompetetiveExams(){
   const [type1,settype]=useState("none")

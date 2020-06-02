@@ -20,7 +20,7 @@ function Faculty() {
         <Logo />
         </div>
         <div className="main">
-            <h2 className="heading">Faculty Analytics</h2>
+            <h2 className="heading">Faculty Data Visualization</h2>
             {
                 tabs.map((topic)=>{
                     return(
@@ -29,12 +29,7 @@ function Faculty() {
                         </div>   
                     )
                 })
-            }
-            <div>
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">
-                Get paper Links ->
-            </a>
-            </div>   
+            } 
         </div>
       </div>
     );

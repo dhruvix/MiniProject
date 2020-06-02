@@ -1,0 +1,60 @@
+ .body-part {
+    font-size: 20px;  
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    width: 650px;
+    border-radius: 12px;
+    padding: 2em;
+    background-color:white;
+  }
+  
+  .form {
+    width: 500px;
+    margin: 20px auto;
+  }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid dodgerblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  input[type=text]:focus {
+    background-color: lightskyblue;
+  }
+
+  input[type=submit]{
+    color: white;
+    width:100%;
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 300px;
+    border:1px solid aliceblue;
+}
+
+  input[type=submit]:focus{
+    border-color: aliceblue;
+    background-color: dodgerblue;
+    text-decoration: none;
+    color: aliceblue;
+    outline: none;
+}
+
+  .retbox {
+    border: 1px solid dodgerblue;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding:5px;
+    overflow: scroll;
+  } 

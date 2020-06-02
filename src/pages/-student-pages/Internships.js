@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-//import IOptions from './IOptions';
 import Table from '../../components/Table';
 import Error from '../Error';
 import Options from '../../components/Options';

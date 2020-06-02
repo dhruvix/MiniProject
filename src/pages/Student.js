@@ -15,7 +15,7 @@ function Student() {
         <Logo />
         </div>
         <div className="main">
-            <h2 className="heading">Student Analytics</h2>
+            <h2 className="heading">Student Data Visualization</h2>
             <div>
             <Link to={`${match.url}/higherstudies`}>Higher Studies</Link>
             </div>

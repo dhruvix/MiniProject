@@ -233,7 +233,7 @@ def stud_journ(req,cur,field,tab):
     rv=cur.fetchall()
     payload = []           
     content = {}
-    for result in rv:
+    for result in conrv:
         content = {field['x']: result[0], field['y']: result[1]}
         payload.append(content)
         content = {}
