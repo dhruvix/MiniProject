@@ -58,3 +58,11 @@
     padding:5px;
     overflow: scroll;
   } 
+
+.paper-load {
+    font-size: 20px;  
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    border-radius: 12px;
+    padding: 2em;
+    background-color:white;
+}

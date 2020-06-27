@@ -14,7 +14,7 @@ function Begin() {
                 <h3>Data centre visualization</h3>
                 <div className="buttline">
                     <Link className="butt" to="/home">Data Visualization and Analytics</Link>
-                    <Link className="butt" to="/generate_link">Generte Paper links</Link>
+                    <Link className="butt" to="/generate_link">Generate Paper links</Link>
                 </div>
                 <h4 style={{marginTop:'10px'}}>created by:</h4>
             </div>
