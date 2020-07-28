@@ -20,12 +20,12 @@ const submithandler=(data1,typpe1,graph1)=>{
   console.log(data1)
 }
 
-const options={x:["organization","year"],
+const options={x:["organization"],
             y:["nof"],
             year:["all","2019","2018","2017","2016","2015"]
             };
 
-const names={x:["organization","year"],
+const names={x:["organization"],
             y:["No. of faculty members"],
             year:["all","2019","2018","2017","2016","2015"]
             };

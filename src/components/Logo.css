@@ -1,3 +1,7 @@
 .Tilt {
     background-color:white;
 }
+
+.Tilt {
+    cursor: grab;
+}
