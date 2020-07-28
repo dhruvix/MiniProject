@@ -1,3 +1,7 @@
-Website to display student analytical data using React.js for frontend and flask for backend.
+# Mini Project May 2020
 
-start from /home 
+## frontend by Dhruva H Narayan and P Sandeep Reddy
+<img src="frontend.PNG" alt="frontend" />
+
+## backend by Harsha H Narayan and Abhishek Srivastava
+<img src="backend.PNG" alt="backend" />
