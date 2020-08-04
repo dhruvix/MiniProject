@@ -123,7 +123,7 @@ function App(){
           <LinkGen />
         </Route>
         <Route path="/">
-          <Error />
+          <Error message="Page doesn't exist" />
         </Route>
       </Switch>
     <Particlejs />

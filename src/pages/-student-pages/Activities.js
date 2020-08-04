@@ -24,14 +24,14 @@ const options={x:["type","departmentId","year"],
              y:["NoOfStu"],
              year:["all","2019","2018","2017","2016","2015"],
              dep:["all","cse","is","ece","ee","cv","bt","ch","im","it","mba","me","ml","te"],
-             op:["ug","pg"]
+             op:["ug"]
             };
 
 const names={x:["type of event","department","year"],
             y:["No. of students"],
             year:["all","2019","2018","2017","2016","2015"],
             dep:["all","computer science","information science","electronics and communication","electrical engineering","civil engineering","biotechnology","chemical engineering","industrial management","information technology","MBA","mechanical engineering","medical electronics","telecommunication"],
-            op:["UG","PG"]
+            op:["UG"]
            };
 
    return(       

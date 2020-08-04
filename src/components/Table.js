@@ -8,7 +8,7 @@ function Table({tabledata,fields}) {
     return (
         <div>
         {
-            (tabledata.length === 0 || !tabledata)?(<Error />)
+            (tabledata.length === 0 || !tabledata)?(<Error message="No Data" />)
             :
             (<Table1 tabledata={tabledata} fields={fields} />)
         }
