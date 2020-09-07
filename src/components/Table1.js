@@ -45,3 +45,4 @@ function Table1({tabledata,fields}) {
 }
  
 export default Table1;                    
+

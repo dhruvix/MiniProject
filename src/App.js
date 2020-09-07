@@ -4,6 +4,8 @@ import Particlejs from './Particlejs';
 import Home from './pages/Home';
 import Error from './pages/Error';
 import Begin from './pages/Begin';
+import LinkGen from './pages/linkGen/LinkGen';
+import Upload from './pages/-stud-anal/Upload';
 import {Switch, Route} from "react-router-dom";
 // student pages 
 import Student from './pages/Student';
@@ -32,7 +34,12 @@ import FacultyResearch from './pages/-faculty-pages/FacultyResearch';
 import FacultyService from './pages/-faculty-pages/FacultyService';
 import FacWorkFDP from './pages/-faculty-pages/FacWorkFDP';
 import FundedProj from './pages/-faculty-pages/FundedProj';
-import LinkGen from './pages/linkGen/LinkGen';
+//non teaching staff pages
+import NonTeach from './pages/NonTeach';
+import NTstaff from './pages/-non-teaching-pages/NTStaff/NTstaff';
+import NTach from './pages/-non-teaching-pages/StaffAch/NTach';
+import NTserv from './pages/-non-teaching-pages/StaffServ/NTserv';
+
 
 function App(){
   return (
@@ -119,8 +126,23 @@ function App(){
         <Route exact path="/faculty/funded_projects">
           <FundedProj />
         </Route>
+        <Route exact path="/nonteaching">
+          <NonTeach />
+        </Route>
+        <Route exact path="/nonteaching/non_teaching_staff">
+          <NTstaff />
+        </Route>
+        <Route exact path="/nonteaching/staff_achievement">
+          <NTach />
+        </Route>
+        <Route exact path="/nonteaching/staff_service">
+          <NTserv />
+        </Route>
         <Route exact path="/generate_link">
           <LinkGen />
+        </Route>
+        <Route exact path="/student-anal">
+          <Upload />
         </Route>
         <Route path="/">
           <Error message="Page doesn't exist" />
